@@ -1,0 +1,89 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.day64__frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #2C3E50;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  border-radius: 5px;
+}
+
+.day64__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.day64__cta {
+  position: relative;
+  width: 200px;
+  height: 70px;
+  font-size: 27px;
+}
+
+.day64__cta:hover::before {
+  background-color: #8E44AD;
+  color: white;
+  transform: translate(11px,7px);
+}
+
+.day64__cta::before {
+  content:  'HOVER ME';
+  background-color: white;
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 200px;
+  height: 70px;
+
+  position: absolute;
+  top:0;
+  left: 0;
+
+  transition: all .3s ease-in-out;
+  transform: translate(-2px,-7px);
+  z-index: 1;
+  /* opacity: 0.1; */
+}
+
+.day64__cta:hover::after {
+  background-color: white;
+  transform: translate(-2px,-3px);
+
+}
+
+.day64__cta::after {
+  content:  '';
+  background-color: #8E44AD;
+
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.1);
+
+  width: 200px;
+  height: 70px;
+
+  position: absolute;
+  top:0;
+  left: 0;
+
+  transition: all .3s ease-in-out;
+  transform: translate(12px,7px);
+  z-index: 0;
+}

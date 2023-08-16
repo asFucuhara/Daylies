@@ -1,0 +1,316 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-white: #fff;
+  --color-darker-white: #f5f5f5;
+  --color-red: #e31837;
+  --color-crayola-navy-blue: #0066cc;
+  --color-darkest: #3d3d3d;
+  --color-lighter: #f0f0f0;
+  --color-green: #66bb6a;
+
+  --theme-font-color: var(--color-darkest);
+  --theme-background: var(--color-white);
+  --theme-bg-highlight: var(--color-darker-white);
+  --theme-bg-hover: var(--color-lighter);
+  --theme-primary: var(--color-crayola-navy-blue);
+  --theme-secondary: var(--color-red);
+  --theme-highlight: var(--color-green);
+
+  --font-size-title: 1rem;
+  --font-size-text: 0.9rem;
+  --font-size-subtext: 0.8rem;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-size-title);
+}
+
+body {
+  background-color: #cccccc;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  background-color: var(--theme-background);
+	height: 850px;
+  
+	position: relative;
+	width: 393px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+	margin-top: .79rem;
+}
+
+.nav__logo {
+  width: 90px;
+	margin-left: 1rem;
+}
+.nav__profile {
+	margin-right: 1rem;
+}
+.nav__profile__img {
+  width: 32px;
+	border-radius: 100%;
+}
+
+.location {
+  background-color: var(--theme-bg-highlight);
+  font-size: var(--font-size-subtext);
+  margin-top: 0.6rem;
+  padding: 0.3rem;
+	padding-left: 1.15rem;
+}
+.location:hover {
+  background-color: var(--theme-bg-hover);
+}
+.location__pin {
+}
+.location__text {
+}
+.location__time {
+  color: var(--theme-highlight);
+}
+
+.search {
+}
+.search__wrapper {
+	align-items: center;
+  display: flex;
+  border: 1px #e6e6e6 solid;
+  border-radius: 3px;
+  height: 48px;
+	justify-content: space-between;
+  margin: 1rem;
+	margin-top:  1.1rem;
+	flex-grow: 0;
+	gap: 0.52rem;
+}
+
+.search__wrapper:focus-within {
+  border: 1px black solid;
+}
+
+.search__menu {
+	margin-left: 0.5rem;
+}
+.search__input {
+  height: calc(100% - 2px);
+  border: 0;
+  font-size: var(--font-size-text);
+	flex-grow: 1;
+	opacity: 70%;
+}
+.search__input:focus {
+  outline: inherit;
+}
+.search__icon {
+	margin-right: 0.5rem;
+}
+.search__icon_image {
+}
+
+.quick {
+}
+.quick__title {
+  font-size: var(--font-size-title);
+	
+	margin-left: 1rem;
+	font-weight: 400;
+}
+
+.quick__list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 0.5rem;
+	padding-left: 1.1rem;
+	padding-right: 1.1rem;
+}
+.quick__card {
+	align-items: center;
+	background: var(--theme-bg-highlight);
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
+	padding: 0.9rem;
+}
+.quick__card__image {
+	width: 24px;
+	height: 24px;
+}
+.quick__card__text {
+	margin-top: 0.3rem;
+}
+
+.account {
+	margin: 1rem;
+}
+.account__title {
+	margin-bottom: 0.5rem;
+}
+
+.account__item:last-child{
+	border-bottom: 0;
+}
+
+.account__item {
+	padding-bottom: 1.2rem;
+	padding-top: 0.4rem;
+	border-bottom: 1px var(--color-lighter) solid;
+}
+
+.account__item__icon {
+}
+.account__item__text {
+	margin-left: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.menu {
+	position: absolute;
+	bottom:0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+	border-top: 1px var(--color-lighter) solid;
+	height: 3.5rem;
+}
+.menu__button {
+	border: 0;
+	background-color: var(--theme-background);
+}
+
+.menu__button__icon {
+}

@@ -1,0 +1,116 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: red;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sphere {
+  position: relative;
+}
+
+.slice {
+  --layer-height: 0px;
+  --radius: 200px;
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid red;
+  transform-style: preserve-3d;
+
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  transform: perspective(1500px) translate(-50%, -50%) translateZ(var(--layer-height)) rotateX(-70deg);
+}
+
+.positive {
+  --layer-height: calc(0px - var(--base-layer-height));
+}
+
+.negative {
+  --layer-height: var(--base-layer-height);
+}
+
+.layer-8 {
+  --base-layer-height: 97px;
+  --radius: 24px;
+  --base-z-index: 8;
+}
+
+.layer-7 {
+  --base-layer-height: 87.5px;
+  --radius: 48px;
+  --base-z-index: 7;
+}
+
+.layer-6 {
+  --base-layer-height: 75px;
+  --radius: 66px;
+  --base-z-index: 6;
+}
+
+.layer-5 {
+  --base-layer-height: 62.5px;
+  --radius: 78px;
+  --base-z-index: 5;
+}
+
+.layer-4 {
+  --base-layer-height: 50px;
+  --radius: 87px;
+  --base-z-index: 4;
+}
+
+.layer-3 {
+  --base-layer-height: 37.5px;
+  --radius: 93px;
+  --base-z-index: 3;
+}
+
+.layer-2 {
+  --base-layer-height: 25px;
+  --radius: 97px;
+  --base-z-index: 2;
+}
+
+.layer-1 {
+  --base-layer-height: 12.5px;
+  --radius: 99px;
+  --base-z-index: 1;
+}
+
+.layer-0 {
+  --base-layer-height: 0px;
+  --radius: 100px;
+  --base-z-index: 0;
+}
+
+/*  radius is R 
+    diameter is 2R
+    height is 2R */
